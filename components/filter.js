@@ -5,6 +5,9 @@ export default function Filter() {
 	
   return <>
 			<div className="shop__sidebar">
+				<div class="shop__sidebar__search">
+					<input type="text" placeholder="Search..."  value={context.search} onChange={e => context.setSearch(e.target.value)} />
+				</div>
 				<div className="shop__sidebar__accordion">
 					<div className="card">
 						<div className="card-heading">

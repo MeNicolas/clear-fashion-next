@@ -7,8 +7,9 @@ export function AppWrapper({ children }) {
 	const [brand, setBrand] = useState('')
 	const [price, setPrice] = useState('')
 	const [sort, setSort] = useState('asc')
+	const [search, setSearch] = useState('')
 	
-  let sharedState = { limit, setLimit, brand, setBrand, price, setPrice, sort, setSort }
+  let sharedState = { limit, setLimit, brand, setBrand, price, setPrice, sort, setSort, search, setSearch }
 
   return (
 	<AppContext.Provider value={sharedState}>

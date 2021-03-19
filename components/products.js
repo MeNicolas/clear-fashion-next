@@ -11,18 +11,14 @@ export default function Products() {
 	
 	console.log(context)
 	const { data, size, setSize } = useSWRInfinite(
-		(index) => `api/products/search/?brand=${context.brand}&price=${context.price}&sort=${context.sort}&page=${index}`,
+		(index) => `api/products/search/?brand=${context.brand}&price=${context.price}&sort=${context.sort}&q=${context.search}&page=${index+1}`,
 		fetcher
 	)
 	return (
 		<>
 			<div className="shop__product__option">
 				<div className="row">
-				  <div className="col-lg-6 col-md-6 col-sm-6">
-					<div className="shop__product__option__left">
-					  <p>Showing 1–12 of 126 results</p>
-					</div>
-				  </div>
+				  <div className="col-lg-6 col-md-6 col-sm-6"></div>
 				  <div className="col-lg-6 col-md-6 col-sm-6">
 						<div className="shop__product__option__right">
 						  <p>Sort by price: </p>
@@ -46,7 +42,9 @@ export default function Products() {
 						</div>
 					))
 				}
-				
+			</div>
+			
+			<div className="row">
 				<Button onClick={() => setSize(size + 1)} className="mx-auto">Load More</Button>
 			</div>
 		</>

@@ -10,17 +10,8 @@ export default function Layout({ children }) {
 		  <header className="header">
 			  <div className="container">
 				<div className="row">
-				  <div className="col-lg-3 col-md-3">
-					<div className="header__logo">
-					</div>
-				  </div>
-				  <div className="col-lg-6 col-md-6">
-					<nav className="header__menu mobile-menu">
-					  <ul>
-						<li key="home"><a href="https://preview.colorlib.com/theme/malefashion/index.html">Home</a></li>
-						<li key="shop" className="active"><a href="shop.html">Shop</a></li>
-					  </ul>
-					</nav>
+				  <div className="col-lg-3 col-md-3 text-center mx-auto">
+						<h3 className="pt-5 pb-4">CLEAR FASHION</h3>
 				  </div>
 				</div>
 			  </div>
